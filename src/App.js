@@ -1,12 +1,9 @@
+import React from "react";
 import "./App.css";
-import Movies from "./components/movies";
+import Root from "./components/root";
 
 function App() {
-  return (
-    <main className="container">
-      <Movies></Movies>
-    </main>
-  );
+  return <Root />;
 }
 
 export default App;
