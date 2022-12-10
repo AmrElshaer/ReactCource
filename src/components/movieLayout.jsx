@@ -4,7 +4,10 @@ import Movies from "./movies";
 import NavBar from "./navbar";
 import { getGenres } from "../services/fakeGenreService";
 import { getMovies } from "../services/fakeMovieService";
+
 import _ from "lodash";
+import Counters from "./counters";
+import { Route, Routes } from "react-router-dom";
 class MovieLayout extends Component {
   state = {
     genrs: [{ _id: -1, name: "All" }, ...getGenres()],
@@ -31,7 +34,6 @@ class MovieLayout extends Component {
     const pages = _.range(1, pagesNum + 1);
     return (
       <React.Fragment>
-        <NavBar />
         <main className="container">
           <div className="row mt-3">
             <div className="col-2">

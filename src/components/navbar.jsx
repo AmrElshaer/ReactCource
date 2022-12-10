@@ -1,8 +1,15 @@
 import React, { Component } from "react";
+import { Link, Router } from "react-router-dom";
+
 const NavBar = (props) => {
   return (
-    <nav className="navbar navbar-light bg-light">
-      <span className="navbar-brand mb-0 h1">Navbar</span>
+    <nav className="nav">
+      <Link className="nav-link" to="/">
+        Home
+      </Link>
+      <Link className="nav-link" to="/products">
+        Product
+      </Link>
     </nav>
   );
 };
