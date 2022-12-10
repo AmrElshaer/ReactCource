@@ -17,7 +17,8 @@ class MovieLayout extends Component {
     this.setState({ movies: this.state.movies });
   };
   refresh = (id) => {
-    const movies = getMovies().filter((m) => m.genre._id === id);
+    const movies =
+      id === -1 ? getMovies() : getMovies().filter((m) => m.genre._id === id);
     this.setState({ movies });
   };
   paging = (currentPage) => {
