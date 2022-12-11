@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { getMovies } from "../services/fakeMovieService";
 import _ from "lodash";
+import { Link } from "react-router-dom";
 class Movies extends Component {
   render() {
     const { length: count } = this.props.movies;
@@ -27,7 +28,9 @@ class Movies extends Component {
           <tbody>
             {movies.map((m) => (
               <tr key={m._id}>
-                <td>{m.title}</td>
+                <td>
+                  <Link to={`/movies/${m._id}`}> {m.title}</Link>
+                </td>
                 <td>{m.genre.name}</td>
                 <td>{m.numberInStock}</td>
                 <td>{m.dailyRentalRate}</td>
