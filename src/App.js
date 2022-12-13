@@ -7,6 +7,7 @@ import MovieLayout from "./components/movieLayout";
 import NavBar from "./components/navbar";
 import Movie from "./components/movie";
 import React, { Component } from "react";
+import Login from "./components/login";
 
 class App extends Component {
   state = {};
@@ -19,6 +20,7 @@ class App extends Component {
           <Route path="/products" element={<Products />} />
           <Route path="/" element={<MovieLayout />} />
           <Route path="/movies/:id" element={<Movie></Movie>}></Route>
+          <Route path="/login" element={<Login />}></Route>
         </Routes>
       </React.Fragment>
     );
